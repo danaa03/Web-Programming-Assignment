@@ -1,0 +1,36 @@
+ @font-face {
+      font-family: Lato;
+      src: url("Lato-Light.ttf");
+    }
+    .panelbg {
+      background-color: rgba(59, 58, 58, 0.481);
+      color: antiquewhite;
+    }
+    .panelbg:hover {
+      background-color: rgba(102, 101, 101, 0.481);
+      cursor: pointer;
+      color: aqua;
+    }
+    .search-bar-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 30%;
+      transform: translate(-50%, -50%);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .search-bar-container input {
+      width: 100%;
+    }
+
+    /* Updated styles for the lower navbar */
+    .lower-navbar {
+      background-color: rgba(47, 45, 44, 0.956);
+      position: fixed;
+      top: 55px; /* Adjusted to match the height of the upper navbar */
+      width: 100%;
+      z-index: 1000;
+    }

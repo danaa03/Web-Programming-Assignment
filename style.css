@@ -1,0 +1,83 @@
+#profile-picture {
+    height:200px;
+    border-radius:30%;
+    left: 10%;
+}
+
+.heading-flex {
+    display: inline-flex;
+    margin:5%;
+    gap:10%;
+    width:80%;
+    background-color: rgb(84, 112, 160);
+    border-radius:50px;
+}
+
+@font-face {
+    font-family: Poiret;
+    src: url(PoiretOne-Regular.ttf);
+}
+
+.moving-dots {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .moving-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(76, 165, 255);
+    border-radius: 50%;
+    animation: moveDot 4s infinite linear;
+  }
+  
+  /* Adjust the position of each dot */
+  .moving-dot:nth-child(1) { left: 10%; top: 20%; }
+  .moving-dot:nth-child(2) { left: 30%; top: 70%; }
+  .moving-dot:nth-child(3) { left: 50%; top: 40%; }
+  .moving-dot:nth-child(4) { left: 70%; top: 90%; }
+  .moving-dot:nth-child(5) { left: 90%; top: 10%; }
+  .moving-dot:nth-child(6) { left: 20%; top: 80%; }
+  .moving-dot:nth-child(7) { left: 40%; top: 30%; }
+  .moving-dot:nth-child(8) { left: 60%; top: 60%; }
+  
+  @keyframes moveDot {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      transform: translate(calc(100vw + 50%), calc(100vh + 50%));
+    }
+  }
+th{
+    text-align:left;
+    padding:22px;
+    padding-left: 40px;
+}
+td{
+    height:100px;
+    padding-left:10px;
+    vertical-align: top;
+}
+
+body {
+    font-family: Poiret;
+    background-color:rgb(22, 21, 21);
+    color:rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+}
+.sections {
+    margin:5%;
+    margin-left:10%;
+}
+.sections-header {
+  
+  margin-left:2%;
+}
