@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Resume Generator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="icon" href="book.png"/>
+  <link href="istyle.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="p-5 bg-dark text-white text-center">
+    <h1>Resume Generator</h1>
+</div>
+
+<div class="container-fluid mt-5">
+    <form class="mx-auto mt-5 p-8 bg-light form-container custom-width" id="form">
+        <div class="row">
+            <div class="col-sm-10 mx-auto">
+                <!-- Personal Details -->
+                <h6 class="mt-2">Personal Details:</h6>
+                <!-- Address -->
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Applicant</b></span>
+                            <input type="text" id="fname" class="form-control" placeholder="First Name*" required>
+                            <input type="text" id="lname" class="form-control" placeholder="Last Name*" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Address</b></span>
+                            <input type="text" id="street" class="form-control" placeholder="Street*" required>
+                            <input type="text" id="city" class="form-control" placeholder="City*" required>
+                            <input type="text" id="state" class="form-control" placeholder="State*" required>
+                            <input type="text" id="zip" class="form-control" placeholder="Zip*" required>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact and Cover Letter -->
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Contact</b></span>
+                            <input type="number" id="phone" class="form-control" placeholder="Phone*" required>
+                            <input type="email" id="email" class="form-control" placeholder="Email*" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <label class="input-group-text bg-warning" for="resumeText"><b>Cover Letter</b></label>
+                            <textarea id="coverLetter" name="resumeText" class="form-control" style="display: inline-block;"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!-- Education -->
+                <h6 class="mt-2">Education:</h6>
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Highest Lvl Ed</b></span>
+                            <input type="text" class="form-control" id="educationLevel" name="educationLevel">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Name of School/Uni</b></span>
+                            <input type="text" class="form-control" id="schoolName" name="schoolName">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Major Area of Study</b></span>
+                            <input type="text" class="form-control" id="stdyArea" name="stdyArea">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Graduation Year</b></span>
+                            <input type="text" class="form-control" id="gradYear" name="gradYear">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Employment History -->
+                <h6 class="mt-2">Employment History:</h6>
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Previous Job Title</b></span>
+                            <input type="text" class="form-control" id="prevTitle" name="prevTitle">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Company Name</b></span>
+                            <input type="text" class="form-control" id="companyNames" name="companyNames">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Employment Date</b></span>
+                            <input type="text" class="form-control" id="employmentDates" name="employmentDates">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Job Responsibilities</b></span>
+                            <input type="text" class="form-control" id="jobResponsibilities" name="jobResponsibilities">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <h6 class="mt-2">Skills:</h6>
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Relevant Skills</b></span>
+                            <input type="text" class="form-control" id="relevantSkills" name="relevantSkills">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Certifications</b></span>
+                            <input type="text" class="form-control" id="certifications" name="certifications">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Availability -->
+                <h6 class="mt-2">Availability:</h6>
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Start Date</b></span>
+                            <input type="text" class="form-control" id="startDate" name="startDate">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Preferred Work Schedule</b></span>
+                            <input type="text" class="form-control" id="workSchedule" name="workSchedule">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group mt-2">
+                    <span class="input-group-text bg-warning"><b>Willingness to Relocate</b></span>
+                    <input type="text" class="form-control" id="relocate" name="relocate">
+                </div>
+
+                <!-- References -->
+                <h6 class="mt-2">References:</h6>
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Reference Name</b></span>
+                            <input type="text" class="form-control" id="referenceName" name="referenceName">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning"><b>Reference Contact</b></span>
+                            <input type="text" class="form-control" id="referenceContact" name="referenceContact">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group mt-2">
+                    <span class="input-group-text bg-warning"><b>Relation to Applicant</b></span>
+                    <input type="text" class="form-control" id="relationship" name="relationship">
+                </div>
+
+                <!-- Additional Questions -->
+                <h6 class="mt-2">Additional Questions:</h6>
+                <div class="input-group mt-2">
+                    <span class="input-group-text bg-warning"><b>Reason for Applying</b></span>
+                    <input type="text" class="form-control" id="reasonToWork" name="reasonToWork">
+                </div>
+
+                <!-- Consent and Agreement -->
+                <h6 class="mt-2">Consent and Agreement:</h6>
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="agreeCheckbox" name="agreeCheckbox">
+                    <label class="form-check-label" for="agreeCheckbox">I agree to the terms and conditions</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="privacyPolicyCheckbox" name="privacyPolicyCheckbox">
+                    <label class="form-check-label" for="privacyPolicyCheckbox">I acknowledge the Privacy Policy</label>
+                </div>
+                <div class="button-container mt-3">
+                    <input type="submit" id="submitW" class="btn btn-dark ms-5" value="Submit" required>
+                    <input type="button" id="updateW" class="btn btn-dark ms-2" disabled=true value="Update" required>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class=" mt-5 p-8 bg-light table-container ms-1">
+        <h2>Applications' Record:</h2>
+        <div class="col-sm-8 mt-5">
+            <table class="table table-hover tableh" id="tableb">
+                <thead class="table-dark">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Street</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Zip</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Cover Letter</th>
+                        <th>Education Level</th>
+                        <th>School Name</th>
+                        <th>Study Area</th>
+                        <th>Graduation Year</th>
+                        <th>Previous Title</th>
+                        <th>Company Names</th>
+                        <th>Employment Dates</th>
+                        <th>Job Responsibilities</th>
+                        <th>Relevant Skills</th>
+                        <th>Certifications</th>
+                        <th>Start Date</th>
+                        <th>Work Schedule</th>
+                        <th>Relocate</th>
+                        <th>Reference Name</th>
+                        <th>Reference Contact</th>
+                        <th>Relationship</th>
+                        <th>Reason to Work</th>
+                        <th>Agree Checkbox</th>
+                        <th>Privacy Policy Checkbox</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+   </div>
+</div>
+<div class="mt-50"></div>
+    <div class="mt-5 p-4 bg-dark text-white text-center" style="width:100%">
+        <p>FINALLY</p>
+    </div>
+</div>
+
+<script src="input.js"></script>
+<script src="output.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+.custom-width {
+    max-width: 800px !important; /* Adjust the width as needed */
+    width: 100% !important;
+}
+.form-container {
+    margin-left: 40px;
+    width: 30%;
+}
+.buttont {
+
+      height:30px;
+      width:50px;
+      margin-top:20px;
+      border:none;
+      margin-left:20px;
+      background-color:rgba(255,193,7);
+      border-radius:10px;
+      font-size:smaller;
+      text-align:center;
+}
+.button-container {
+    text-align:center;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.p-5 {
+    width: 100%;
+}
+
+.table-container {
+    margin-left: 0;
+}
+table{
+      margin-left:30px;
+}
+
+.tableh{
+      cursor:pointer;
+}
+.tableheader {
+      background-color:rgba(255,193,7);
+}
